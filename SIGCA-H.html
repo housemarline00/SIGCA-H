@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIGCA-H - Sistema de Gestión de Calidad Alimentaria</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            background-color: #f4f6f9;
+        }
+
+        .sidebar {
+            height: 100vh;
+            background-color: #212529;
+            color: white;
+        }
+
+        .sidebar a {
+            color: white;
+            text-decoration: none;
+            display: block;
+            padding: 10px;
+        }
+
+        .sidebar a:hover {
+            background-color: #343a40;
+        }
+
+        .card-indicator {
+            border-left: 5px solid #0d6efd;
+        }
+
+        .header {
+            background-color: white;
+            border-bottom: 1px solid #dee2e6;
+            padding: 10px;
+        }
+
+        .content {
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container-fluid">
+    <div class="row">
+
+        <!-- Sidebar -->
+        <div class="col-md-2 sidebar">
+            <h4 class="text-center mt-3">SIGCA-H</h4>
+            <hr>
+            <a href="#">Dashboard</a>
+            <a href="#">Control de Temperatura</a>
+            <a href="#">Inventario</a>
+            <a href="#">Control de Agua</a>
+            <a href="#">Reportes</a>
+            <a href="#">Usuarios</a>
+        </div>
+
+        <!-- Main Content -->
+        <div class="col-md-10">
+
+            <!-- Header -->
+            <div class="header d-flex justify-content-between align-items-center">
+                <h5>Sistema de Gestión de Calidad Alimentaria</h5>
+                <div>
+                    <span>Usuario: Admin</span>
+                    <button class="btn btn-sm btn-outline-danger ms-2">Cerrar sesión</button>
+                </div>
+            </div>
+
+            <!-- Content -->
+            <div class="content">
+
+                <!-- Indicators -->
+                <div class="row mb-4">
+                    <div class="col-md-4">
+                        <div class="card card-indicator">
+                            <div class="card-body">
+                                <h6>Temperatura promedio</h6>
+                                <h3>3.2 °C</h3>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="card card-indicator">
+                            <div class="card-body">
+                                <h6>Alertas activas</h6>
+                                <h3>2</h3>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="card card-indicator">
+                            <div class="card-body">
+                                <h6>Registros hoy</h6>
+                                <h3>18</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Temperature Table -->
+                <div class="card">
+                    <div class="card-header">
+                        Control de Temperatura
+                    </div>
+                    <div class="card-body">
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th>Área</th>
+                                    <th>Temperatura</th>
+                                    <th>Fecha</th>
+                                    <th>Estado</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Refrigerador 1</td>
+                                    <td>3.1 °C</td>
+                                    <td>2026-02-16 10:30</td>
+                                    <td><span class="badge bg-success">Correcto</span></td>
+                                </tr>
+
+                                <tr>
+                                    <td>Congelador</td>
+                                    <td>-15 °C</td>
+                                    <td>2026-02-16 10:30</td>
+                                    <td><span class="badge bg-danger">Alerta</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+</body>
+</html>
